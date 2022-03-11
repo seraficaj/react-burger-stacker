@@ -7,9 +7,10 @@ class IngredientList extends Component {
             return (
                 <Ingredient
                     ingredient={elem}
-                    name={elem.name}
                     color={elem.color}
                     key={`key-${idx}`}
+                    name={elem.name}
+                    addToBurger = {this.props.addToBurger}
                 />
             );
         });
