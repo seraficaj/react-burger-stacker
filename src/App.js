@@ -18,8 +18,8 @@ class App extends Component {
         //     ],
         // }));
         let updatedBurgerList = this.state.burgerIngredients;
-        updatedBurgerList.push({name,color});
-        this.setState({burgerIngredients: updatedBurgerList})
+        updatedBurgerList.push({ name, color });
+        this.setState({ burgerIngredients: updatedBurgerList });
     };
 
     render() {
@@ -32,7 +32,9 @@ class App extends Component {
                             addToBurger={this.addToBurger}
                             ingredients={this.props.ingredientList}
                         />
-                        <BurgerPane />
+                        <BurgerPane
+                            ingredients={this.state.burgerIngredients}
+                        />
                     </div>
                 </main>
             </>
