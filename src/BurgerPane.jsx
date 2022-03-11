@@ -20,7 +20,7 @@ class BurgerPane extends Component {
                 <h2 className="is-center">BurgerPane</h2>
                 {ingredients}
                 <hr />
-                <Clear />
+                <Clear clearBurger={this.props.clearBurger}/>
             </section>
         );
     }

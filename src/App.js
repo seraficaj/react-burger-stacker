@@ -7,6 +7,10 @@ class App extends Component {
         burgerIngredients: [],
     };
 
+    clearBurger = () => {
+        this.setState({ burgerIngredients: [] });
+    };
+
     addToBurger = (name, color) => {
         // add the selected ingredient to state.burgerIngredients
         // push new ingredient to the burger
@@ -33,6 +37,7 @@ class App extends Component {
                             ingredients={this.props.ingredientList}
                         />
                         <BurgerPane
+                            clearBurger={this.clearBurger}
                             ingredients={this.state.burgerIngredients}
                         />
                     </div>
