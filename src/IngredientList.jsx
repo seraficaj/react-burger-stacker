@@ -3,10 +3,20 @@ import Ingredient from "./Ingredient";
 
 class IngredientList extends Component {
     render() {
+        const ingredients = this.props.ingredients.map((elem, idx) => {
+            return (
+                <Ingredient
+                    ingredient={elem}
+                    name={elem.name}
+                    color={elem.color}
+                    key={`key-${idx}`}
+                />
+            );
+        });
         return (
-            <section>
-                <h2 className="ingredient-list">Ingredient List</h2>
-                <Ingredient />
+            <section className="col">
+                <h2 className="is-center">Ingredient List</h2>
+                {ingredients}
             </section>
         );
     }

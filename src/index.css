@@ -14,8 +14,6 @@ code {
 
 section {
   border: 1px solid black;
-}
-
-.ingredient {
-  border: 1px solid red;
+  width: 30%;
+  display: inline-block;
 }

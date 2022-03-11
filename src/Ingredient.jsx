@@ -3,8 +3,10 @@ import React, { Component } from "react";
 class Ingredient extends Component {
     render() {
         return (
-            <div className="ingredient">
-                <h3>Ingredient</h3>
+            <div className="card" style={{backgroundColor: `${this.props.color}`, color: "lightgrey"}}>
+                <header>
+                    <h3>{this.props.name}</h3>
+                </header>
             </div>
         );
     }
